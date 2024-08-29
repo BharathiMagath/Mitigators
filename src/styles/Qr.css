@@ -1,0 +1,90 @@
+.qr-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #000000;
+    padding: 20px;
+    position: relative; /* Allows for positioning of child elements */
+}
+
+.qr-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.qr-title {
+    font-size: 4em; /* Large text size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #9663b2;
+}
+
+.qr-description {
+    font-size: 1.5em; /* Adjust description text size */
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #9663b2;
+}
+
+.qr-button {
+    font-size: 1.8em; /* Large button text */
+    padding: 10px 20px;
+    background-color: #9668aa;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.qr-button:hover {
+    background-color: #020202;
+}
+
+.qr-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative; /* Allows absolute positioning of the QR code */
+    overflow: hidden; /* Hides overflow content */
+}
+
+.qr-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Adjust width to fit your QR code */
+    height: 300px; /* Adjust height to fit your QR code */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Removed the background-color and border-radius properties */
+}
+
+.qr-text {
+    font-size: 2em; /* Large text size */
+    color: #9667ac;
+    margin-top: 20px;
+}
+
+/* Animation for text */
+.animated-text {
+    animation: text-animation 3s infinite;
+}
+
+@keyframes text-animation {
+    0%, 100% {
+        transform: scale(1);
+        color: #b69fba;
+    }
+    50% {
+        transform: scale(1.0);
+        color: #724d89;
+    }
+}
